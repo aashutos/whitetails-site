@@ -3,8 +3,8 @@ remote_theme: daattali/beautiful-jekyll@6.0.1
 title: WhiteTails
 author: WhiteTails
 description: An iterative regular expression find and replace tool for Visual Studio Code.
-url: ""
-baseurl: "https://github.com/aashutos/whitetails-site"
+url: "https://aashutos.github.io"
+baseurl: "/whitetails-site"
 
 navbar-links:
   Installation: "#installation"
