@@ -1,0 +1,35 @@
+remote_theme: daattali/beautiful-jekyll@6.0.1
+
+title: WhiteTails
+author: WhiteTails
+description: An iterative regular expression find and replace tool for Visual Studio Code.
+url: ""
+baseurl: ""
+
+navbar-links:
+  Installation: "#installation"
+  Usage: "#usage"
+  Releases: "#download"
+
+page-col: "#ffffff"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+title-on-all-pages: true
+post_search: false
+rss: false
+
+timezone: Europe/London
+markdown: kramdown
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sitemap
