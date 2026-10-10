@@ -4,7 +4,7 @@ title: WhiteTails
 author: WhiteTails
 description: An iterative regular expression find and replace tool for Visual Studio Code.
 url: ""
-baseurl: ""
+baseurl: "https://github.com/aashutos/whitetails-site"
 
 navbar-links:
   Installation: "#installation"
