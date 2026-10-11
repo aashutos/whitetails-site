@@ -4,6 +4,7 @@ title: WhiteTails
 subtitle: Iterative regular expression find & replace for Visual Studio Code
 show-avatar: false
 ---
+##
 
 WhiteTails is a focused **find and replace tool for Visual Studio Code**, designed for applying multiple regular-expression transformations to text files in sequence.
 
