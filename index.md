@@ -66,7 +66,7 @@ Add your find/replace transformations, review their order, and execute them agai
 ## Releases {#download}
 
 VSIX releases for direct download/installation onto VS Code:
-{% assign vsix_files = site.static_files | where: "extname", ".vsix" | sort: "modified_time" | reverse %}
+{% assign daily_vsix_files = site.static_files | where: "extname", ".vsix" | where_exp: "file", "file.path contains '/releases/'" | sort: "modified_time" | reverse %}
 
 {% if vsix_files.size > 0 %}
 
@@ -77,7 +77,24 @@ VSIX releases for direct download/installation onto VS Code:
 {% endfor %}
 
 {% else %}
-No releases available yet.
+_No releases available yet._
+{% endif %}
+
+## Daily Builds {#nightly-build}
+
+These VSIX packages are unstable build packages that are built nightly from the latest source code. Please use with caution.
+{% assign daily_vsix_files = site.static_files | where: "extname", ".vsix" | where_exp: "file", "file.path contains '/nightly-build/'" | sort: "modified_time" | reverse %}
+
+{% if daily_vsix_files.size > 0 %}
+
+| Version | Filename | Released | Size |
+|---------|----------|----------|------|
+{% for file in daily_vsix_files %}
+| `{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}` | [{{ file.name }}]({{ site.baseurl }}{{ file.path }}) | {{ file.modified_time | date: "%b %d, %Y" }} | {{ file.size | divided_by: 1024.0 | round: 2 }} KB |
+{% endfor %}
+
+{% else %}
+_No daily releases available yet._
 {% endif %}
 
 ---

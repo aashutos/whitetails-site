@@ -1,6 +1,7 @@
 remote_theme: daattali/beautiful-jekyll@6.0.1
 
 title: WhiteTails
+title-img: "/assets/img/whitetails-icon.png"
 author: WhiteTails
 description: An iterative regular expression find and replace tool for Visual Studio Code.
 url: "https://aashutos.github.io"
@@ -10,14 +11,15 @@ navbar-links:
   Installation: "#installation"
   Usage: "#usage"
   Releases: "#download"
+  Nightly Builds: "#nightly-build"
 
 page-col: "#ffffff"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
+navbar-col: "#123B4A"
+navbar-text-col: "#EEEEEE"
+navbar-border-col: "#245363"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
