@@ -80,7 +80,7 @@ VSIX releases for direct download/installation onto VS Code:
 _No releases available yet._
 {% endif %}
 
-## Daily Builds {#nightly-build}
+## Nightly Builds {#nightly-build}
 
 These VSIX packages are unstable build packages that are built nightly from the latest source code. Please use with caution.
 {% assign daily_vsix_files = site.static_files | where: "extname", ".vsix" | where_exp: "file", "file.path contains '/nightly-build/'" | sort: "modified_time" | reverse %}
