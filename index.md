@@ -4,7 +4,6 @@ title: WhiteTails
 subtitle: Iterative regular expression find & replace for Visual Studio Code
 show-avatar: false
 ---
-##
 
 WhiteTails is a focused **find and replace tool for Visual Studio Code**, designed for applying multiple regular-expression transformations to text files in sequence.
 
@@ -86,12 +85,13 @@ These VSIX packages are unstable build packages that are built nightly from the 
 {% assign daily_vsix_files = site.static_files | where: "extname", ".vsix" | where_exp: "file", "file.path contains '/nightly-build/'" | sort: "modified_time" | reverse %}
 
 {% if daily_vsix_files.size > 0 %}
-
+{% capture releases_table %}
 | Version | Filename | Released | Size |
 |---------|----------|----------|------|
 {% for file in daily_vsix_files %}
 | `{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}` | [{{ file.name }}]({{ site.baseurl }}{{ file.path }}) | {{ file.modified_time | date: "%b %d, %Y" }} | {{ file.size | divided_by: 1024.0 | round: 2 }} KB |
 {% endfor %}
+{% endcapture %}
 
 {% else %}
 _No daily releases available yet._
