@@ -85,14 +85,22 @@ These VSIX packages are unstable build packages that are built nightly from the 
 {% assign daily_vsix_files = site.static_files | where: "extname", ".vsix" | where_exp: "file", "file.path contains '/nightly-build/'" | sort: "modified_time" | reverse %}
 
 {% if daily_vsix_files.size > 0 %}
-{% capture releases_table %}
-| Version | Filename | Released | Size |
-|---------|----------|----------|------|
-{% for file in daily_vsix_files %}
-| `{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}` | [{{ file.name }}]({{ site.baseurl }}{{ file.path }}) | {{ file.modified_time | date: "%b %d, %Y" }} | {{ file.size | divided_by: 1024.0 | round: 2 }} KB |
-{% endfor %}
-{% endcapture %}
-
+<table>
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Filename</th>
+            <th>Released</th>
+            <th>Size</th>
+        </tr>
+    </thead>
+    <tbody> {% for file in daily_vsix_files %} <tr>
+            <td><code>{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}</code></td>
+            <td><a href="{{ site.baseurl }}{{ file.path }}">{{ file.name }}</a></td>
+            <td>{{ file.modified_time | date: "%b %d, %Y" }}</td>
+            <td>{{ file.size | divided_by: 1024.0 | round: 2 }} KB</td>
+        </tr> {% endfor %} </tbody>
+</table>
 {% else %}
 _No daily releases available yet._
 {% endif %}
