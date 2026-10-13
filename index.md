@@ -74,7 +74,6 @@ VSIX releases for direct download/installation onto VS Code:
             <th>Version</th>
             <th>Filename</th>
             <th>Released</th>
-            <th>Size</th>
         </tr>
     </thead>
     <tbody> 
@@ -83,7 +82,6 @@ VSIX releases for direct download/installation onto VS Code:
             <td><code>{{ file.name | replace: "whitetails-", "" | replace: ".vsix", "" }}</code></td>
             <td><a href="{{ site.baseurl }}{{ file.path }}">{{ file.name }}</a></td>
             <td>{{ file.modified_time | date: "%b %d, %Y" }}</td>
-            <td>{{ file.size | divided_by: 1024.0 | round: 2 }} KB</td>
         </tr> 
         {% endfor %} 
     </tbody>
@@ -104,7 +102,6 @@ These VSIX packages are unstable build packages that are built nightly from the 
             <th>Version</th>
             <th>Filename</th>
             <th>Released</th>
-            <th>Size</th>
         </tr>
     </thead>
     <tbody> 
@@ -113,7 +110,6 @@ These VSIX packages are unstable build packages that are built nightly from the 
             <td><code>{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}</code></td>
             <td><a href="{{ site.baseurl }}{{ file.path }}">{{ file.name }}</a></td>
             <td>{{ file.modified_time | date: "%b %d, %Y" }}</td>
-            <td>{{ file.size | divided_by: 1024.0 | round: 2 }} KB</td>
         </tr> 
         {% endfor %} 
     </tbody>
