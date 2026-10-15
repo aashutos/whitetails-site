@@ -101,7 +101,6 @@ These VSIX packages are unstable build packages that are built nightly from the 
         <tr>
             <th>Version</th>
             <th>Filename</th>
-            <th>Released</th>
         </tr>
     </thead>
     <tbody> 
@@ -109,7 +108,6 @@ These VSIX packages are unstable build packages that are built nightly from the 
         <tr>
             <td><code>{{ file.name | replace: "albicilla-", "" | replace: ".vsix", "" }}</code></td>
             <td><a href="{{ site.baseurl }}{{ file.path }}">{{ file.name }}</a></td>
-            <td>{{ file.modified_time | date: "%b %d, %Y" }}</td>
         </tr> 
         {% endfor %} 
     </tbody>
