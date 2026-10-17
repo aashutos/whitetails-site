@@ -11,7 +11,7 @@ WhiteTails is a focused **find and replace tool for Visual Studio Code**, design
 
 ## Why WhiteTails?
 
-A single regular-expression replacement is often not enough. WhiteTails lets you define a sequence of transformations and execute them against your document as one repeatable operation.
+Want to do a complex Find-Replace transformation on some text, you don't need to be a RegEx Ninja to come up with that one liner! Oftentimes, A single regular-expression replacement is not enough. WhiteTails lets you define a sequence of transformations and execute them against your document as one repeatable operation.
 
 ### 🔎 Regular expressions
 
